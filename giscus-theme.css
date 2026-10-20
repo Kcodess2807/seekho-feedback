@@ -1,0 +1,114 @@
+/*
+  SEEKHO theme for the giscus feedback wall (SEEKHO's FeedbackWall component, served via jsDelivr).
+  giscus renders inside an iframe and styles itself with GitHub's Primer CSS
+  variables; we redefine them with SEEKHO's palette (docs/design.md 14, 20).
+  Variable names follow giscus's own themes (giscus.app/themes/light.css).
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+main {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+
+  /* Light: ink on paper, clay accent, ink pill buttons. */
+  --color-fg-default: #141413;
+  --color-fg-muted: #5e5d59;
+  --color-fg-subtle: #8f8d85;
+  --color-canvas-default: #faf9f5;
+  --color-canvas-overlay: #faf9f5;
+  --color-canvas-inset: #f4f2ec;
+  --color-canvas-subtle: #f0eee6;
+  --color-border-default: #e8e6dc;
+  --color-border-muted: #e8e6dc;
+  --color-neutral-muted: #b0aea533;
+
+  --color-accent-fg: #c4613f;
+  --color-accent-emphasis: #d97757;
+  --color-accent-muted: #d9775766;
+  --color-accent-subtle: #d977571a;
+  --color-success-fg: #788c5d;
+  --color-attention-fg: #9a6700;
+  --color-attention-muted: #d4a72c66;
+  --color-attention-subtle: #fff8c5;
+  --color-danger-fg: #c4413f;
+  --color-danger-muted: #ff818266;
+  --color-danger-subtle: #ffebe9;
+
+  --color-btn-text: #141413;
+  --color-btn-bg: #faf9f5;
+  --color-btn-border: #e8e6dc;
+  --color-btn-shadow: none;
+  --color-btn-inset-shadow: none;
+  --color-btn-hover-bg: #f0eee6;
+  --color-btn-hover-border: #e8e6dc;
+  --color-btn-active-bg: #e8e6dc;
+  --color-btn-active-border: #e8e6dc;
+  --color-btn-selected-bg: #e8e6dc;
+
+  --color-btn-primary-text: #faf9f5;
+  --color-btn-primary-bg: #141413;
+  --color-btn-primary-border: #141413;
+  --color-btn-primary-shadow: none;
+  --color-btn-primary-inset-shadow: none;
+  --color-btn-primary-hover-bg: #2e2d2a;
+  --color-btn-primary-hover-border: #2e2d2a;
+  --color-btn-primary-selected-bg: #2e2d2a;
+  --color-btn-primary-selected-shadow: none;
+  --color-btn-primary-disabled-text: #faf9f5cc;
+  --color-btn-primary-disabled-bg: #b0aea5;
+  --color-btn-primary-disabled-border: #b0aea5;
+
+  --color-action-list-item-default-hover-bg: #e8e6dc80;
+  --color-segmented-control-bg: #e8e6dc;
+  --color-segmented-control-button-bg: #faf9f5;
+  --color-segmented-control-button-selected-border: #b0aea5;
+  --color-primer-shadow-inset: none;
+  --color-scale-gray-1: #e8e6dc;
+  --color-scale-blue-1: #d977574d;
+  --color-social-reaction-bg-hover: var(--color-scale-gray-1);
+  --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-1);
+}
+
+/* Dark: paper and ink swap, accents stay (same rule as globals.css). */
+@media (prefers-color-scheme: dark) {
+  main {
+    --color-fg-default: #faf9f5;
+    --color-fg-muted: #b0aea5;
+    --color-fg-subtle: #8f8d85;
+    --color-canvas-default: #1f1e1d;
+    --color-canvas-overlay: #262624;
+    --color-canvas-inset: #191817;
+    --color-canvas-subtle: #262624;
+    --color-border-default: #30302e;
+    --color-border-muted: #30302e;
+    --color-neutral-muted: #8f8d8533;
+
+    --color-accent-fg: #e08a6d;
+    --color-attention-subtle: #3a3220;
+    --color-danger-subtle: #3a2220;
+
+    --color-btn-text: #faf9f5;
+    --color-btn-bg: #262624;
+    --color-btn-border: #30302e;
+    --color-btn-hover-bg: #30302e;
+    --color-btn-hover-border: #3a3a37;
+    --color-btn-active-bg: #3a3a37;
+    --color-btn-active-border: #3a3a37;
+    --color-btn-selected-bg: #30302e;
+
+    --color-btn-primary-text: #141413;
+    --color-btn-primary-bg: #faf9f5;
+    --color-btn-primary-border: #faf9f5;
+    --color-btn-primary-hover-bg: #e8e6dc;
+    --color-btn-primary-hover-border: #e8e6dc;
+    --color-btn-primary-selected-bg: #e8e6dc;
+    --color-btn-primary-disabled-text: #141413cc;
+    --color-btn-primary-disabled-bg: #8f8d85;
+    --color-btn-primary-disabled-border: #8f8d85;
+
+    --color-action-list-item-default-hover-bg: #30302e80;
+    --color-segmented-control-bg: #30302e;
+    --color-segmented-control-button-bg: #1f1e1d;
+    --color-segmented-control-button-selected-border: #8f8d85;
+    --color-scale-gray-1: #30302e;
+  }
+}
